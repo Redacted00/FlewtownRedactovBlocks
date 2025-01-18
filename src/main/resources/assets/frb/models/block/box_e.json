@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "frb:block/box_e_top",
+    "bottom": "frb:block/box_e_top",
+    "side": "frb:block/box_e_side"
+  }
+}

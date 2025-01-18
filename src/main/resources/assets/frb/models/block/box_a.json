@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "top": "frb:block/box_a_top",
+    "bottom": "frb:block/box_a_bottom",
+    "south": "frb:block/box_a_front",
+    "west": "frb:block/box_a_side",
+    "north": "frb:block/box_a_front",
+    "east": "frb:block/box_a_side"
+  }
+}

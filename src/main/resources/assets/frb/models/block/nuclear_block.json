@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "frb:block/nuclear_block",
+    "top": "frb:block/nuclear_block_top",
+    "bottom": "frb:block/nuclear_block_bottom"
+  }
+}

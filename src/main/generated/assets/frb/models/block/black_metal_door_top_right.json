@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "frb:block/black_metal_door_bottom",
+    "top": "frb:block/black_metal_door_top"
+  }
+}

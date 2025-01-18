@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "frb:block/soil_h"
+    }
+  }
+}

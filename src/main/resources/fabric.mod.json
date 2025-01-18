@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "frb",
+	"version": "${version}",
+	"name": "Flewtown Redactov Blocks",
+	"description": "Blocks from Greenfield Resourse Pack and Flewtown",
+	"authors": [
+		"REDACTED_xd (Redacted00)","Bloha"
+	],
+	"contact": {
+		"homepage": "https://redactedxd.ru/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "REDACTED",
+	"icon": "assets/frb/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"redactov.frb.FlewtownRedactovBlocks"
+		],
+		"client": [
+			"redactov.frb.FlewtownRedactovBlocksClient"
+		],
+		"fabric-datagen": [
+			"redactov.frb.FlewtownRedactovBlocksDataGenerator"
+		]
+	},
+	"mixins": [
+		"flewtown-redactov-blocks.mixins.json",
+		{
+			"config": "flewtown-redactov-blocks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.4",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

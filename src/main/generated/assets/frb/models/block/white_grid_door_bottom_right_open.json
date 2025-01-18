@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "frb:block/white_grid_door_bottom",
+    "top": "frb:block/white_grid_door_top"
+  }
+}

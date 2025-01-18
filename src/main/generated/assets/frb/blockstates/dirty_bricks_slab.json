@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "frb:block/dirty_bricks_slab"
+    },
+    "type=double": {
+      "model": "frb:block/dirty_bricks"
+    },
+    "type=top": {
+      "model": "frb:block/dirty_bricks_slab_top"
+    }
+  }
+}

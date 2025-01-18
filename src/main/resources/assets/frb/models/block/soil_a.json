@@ -1,0 +1,8 @@
+{   "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "frb:block/dirt",
+    "bottom": "frb:block/soil_block_bottom",
+    "top": "frb:block/soil_block_top",
+    "side": "frb:block/soil_block_side"
+  }
+}
