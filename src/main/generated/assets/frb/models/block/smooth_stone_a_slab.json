@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "frb:block/smooth_stone_a",
-    "side": "frb:block/smooth_stone_a",
-    "top": "frb:block/smooth_stone_a"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "frb:block/orange_wall_planks_vertical"
-  }
-}
