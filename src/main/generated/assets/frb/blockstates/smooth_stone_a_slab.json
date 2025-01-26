@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "frb:block/smooth_stone_a_slab"
+    },
+    "type=double": {
+      "model": "frb:block/smooth_stone_a"
+    },
+    "type=top": {
+      "model": "frb:block/smooth_stone_a_slab_top"
+    }
+  }
+}

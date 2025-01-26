@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "frb:block/orange_bricks",
+    "side": "frb:block/orange_bricks",
+    "top": "frb:block/orange_bricks"
+  }
+}

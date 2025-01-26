@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "frb:block/bricks_old_a_slab"
+    },
+    "type=double": {
+      "model": "frb:block/bricks_old_a"
+    },
+    "type=top": {
+      "model": "frb:block/bricks_old_a_slab_top"
+    }
+  }
+}

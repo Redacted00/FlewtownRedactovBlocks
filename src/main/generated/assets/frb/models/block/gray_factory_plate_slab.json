@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "frb:block/factory_plate_grey",
+    "side": "frb:block/factory_plate_grey",
+    "top": "frb:block/factory_plate_grey"
+  }
+}

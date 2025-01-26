@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frb:gravel",
+    "frb:grass",
+    "frb:dirt",
+    "frb:soil_a"
+  ]
+}

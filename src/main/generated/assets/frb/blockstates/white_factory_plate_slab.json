@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "frb:block/white_factory_plate_slab"
+    },
+    "type=double": {
+      "model": "frb:block/factory_plate_white"
+    },
+    "type=top": {
+      "model": "frb:block/white_factory_plate_slab_top"
+    }
+  }
+}
