@@ -2,14 +2,17 @@ package redactov.frb;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureSet;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redactov.frb.block.ModBlocks;
 import redactov.frb.item.ModItems;
+import redactov.frb.screenhandler.DumpsterScreenHandler;
+import redactov.frb.screenhandler.DumpsterBScreenHandler;
 
 
 public class FlewtownRedactovBlocks implements ModInitializer {
@@ -20,6 +23,19 @@ public class FlewtownRedactovBlocks implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static final ScreenHandlerType<DumpsterScreenHandler> DUMPSTER_SCREEN_HANDLER_TYPE = Registry.register(
+			Registries.SCREEN_HANDLER,
+			new Identifier(FlewtownRedactovBlocks.MOD_ID, "dumpster"),
+			new ScreenHandlerType<>(DumpsterScreenHandler::new, FeatureSet.empty())
+	);
+
+	public static final ScreenHandlerType<DumpsterBScreenHandler> DUMPSTER_B_SCREEN_HANDLER_TYPE = Registry.register(
+			Registries.SCREEN_HANDLER,
+			new Identifier(FlewtownRedactovBlocks.MOD_ID, "dumpster_b"),
+			new ScreenHandlerType<>(DumpsterBScreenHandler::new, FeatureSet.empty())
+	);
+
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -29,10 +45,8 @@ public class FlewtownRedactovBlocks implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		GreenfieldItemGroup.initialize();
 		ModBlocks.initialize();
+		BlocksEntityTypes.initialize();
 		ModItems.initialize();
-
-
-
 
 	}
 }

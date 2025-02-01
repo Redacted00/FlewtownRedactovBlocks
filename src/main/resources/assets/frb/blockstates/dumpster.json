@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "frb:block/dumpster" },
+    "facing=east": { "model": "frb:block/dumpster", "y": 90},
+    "facing=south": { "model": "frb:block/dumpster", "y": 180},
+    "facing=west": { "model": "frb:block/dumpster", "y": 270}
+  }
+}

@@ -16,6 +16,8 @@ import net.minecraft.util.Identifier;
 
 import redactov.frb.FlewtownRedactovBlocks;
 import redactov.frb.GreenfieldItemGroup;
+import redactov.frb.block.props.DumpsterABlock;
+import redactov.frb.block.props.DumpsterBBlock;
 
 import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
@@ -378,7 +380,9 @@ public class ModBlocks {
     public static final Block WHITE_OAK_DOOR = register(new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS),BlockSetType.OAK),"white_oak_door",true);
     public static final Block GLASS_DOOR = register(new DoorBlock(FabricBlockSettings.copyOf(Blocks.GLASS),BlockSetType.STONE),"glass_door",true);
 
-
+    // Bloha Models
+    public static final Block DUMPSTER = register(new DumpsterABlock(AbstractBlock.Settings.copy(Blocks.CHEST)), "dumpster",true);
+    public static final Block DUMPSTER_B = register(new DumpsterBBlock(AbstractBlock.Settings.copy(Blocks.CHEST)), "dumpster_b",true);
 
 
 }

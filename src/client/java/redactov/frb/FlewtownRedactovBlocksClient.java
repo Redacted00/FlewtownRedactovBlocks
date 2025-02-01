@@ -2,13 +2,17 @@ package redactov.frb;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import redactov.frb.block.ModBlocks;
 
 public class FlewtownRedactovBlocksClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+
+		HandledScreens.register(FlewtownRedactovBlocks.DUMPSTER_SCREEN_HANDLER_TYPE, DumpsterScreen::new);
+		HandledScreens.register(FlewtownRedactovBlocks.DUMPSTER_B_SCREEN_HANDLER_TYPE,DumpsterBScreen::new);
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLASS_B, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLASS_B, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ORANGE_GLASS, RenderLayer.getTranslucent());
@@ -53,6 +57,7 @@ public class FlewtownRedactovBlocksClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.METAL_DOOR_B, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.METAL_GRID_DOOR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_GRID_DOOR, RenderLayer.getCutout());
+
 
 
 	}

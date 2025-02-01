@@ -17,9 +17,6 @@ public class GreenfieldItemGroup {
 
     public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(FlewtownRedactovBlocks.MOD_ID, "greenfieldblocks"));
 
-
-
-
     public static void initialize() {
 
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
@@ -27,6 +24,5 @@ public class GreenfieldItemGroup {
             .displayName(Text.of("Greenfield Blocks"))
             .build()); // build() no longer registers by itself
         }
-
 }
 
