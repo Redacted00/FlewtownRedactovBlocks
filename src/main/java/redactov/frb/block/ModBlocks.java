@@ -73,7 +73,7 @@ public class ModBlocks {
     }
 
 
-    //public static final AbstractBlock.Settings Default_Block = AbstractBlock.Settings.create().mapColor(MapColor.STONE_GREY).instrument(Instrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F);
+    //public static final AbstractBlock.Settings Default_Block = AbstractBlock.Settings.create().mapColor(MapColor.STONE_gray).instrument(Instrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F);
 
     private static final AbstractBlock.Settings GlassBlockSettings = AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS).hardness(0.4f);
 
@@ -119,13 +119,13 @@ public class ModBlocks {
 
     // STONE PLATE's
     public static final Block STONE_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate",true);
-    public static final Block STONE_PLATE_GREY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_grey",true);
-    public static final Block STONE_PLATE_LIGHT_GREY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_light_grey",true);
-    public static final Block STONE_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_white",true);
-    public static final Block STONE_PLATE_WHITE_COLORB = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_white_colorb",true);
-    public static final Block STONE_PLATE_WHITE_COLORC = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_white_colorc",true);
-    public static final Block STONE_PLATE_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_yellow",true);
-    public static final Block STONE_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_dark_yellow",true);
+    public static final Block STONE_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"gray_stone_plate",true);
+    public static final Block STONE_PLATE_LIGHT_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"light_gray_stone_plate",true);
+    public static final Block STONE_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_stone_plate",true);
+    public static final Block STONE_PLATE_WHITE_COLORB = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_stone_plate_b",true);
+    public static final Block STONE_PLATE_WHITE_COLORC = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_stone_plate_c",true);
+    public static final Block STONE_PLATE_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_stone_plate",true);
+    public static final Block STONE_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dark_yellow_stone_plate",true);
 
     //BRICK PLATE's
 
@@ -133,12 +133,12 @@ public class ModBlocks {
     public static final Block BRICK_PLATE_OLD = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_old",true);
     public static final Block BRICK_PLATE_MOSSY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_mossy",true);
     public static final Block BRICK_PLATE_OLD_MOSSY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_old_mossy",true);
-    public static final Block BRICK_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_white",true);
-    public static final Block BRICK_PLATE_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_yellow",true);
-    public static final Block BRICK_PLATE_DESERT = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_desert",true);
-    public static final Block BRICK_PLATE_GREY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_grey",true);
-    public static final Block BRICK_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_dark_yellow",true);
-    public static final Block BRICK_PLATE_BROWN = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_brown",true);
+    public static final Block BRICK_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_brick_plate",true);
+    public static final Block BRICK_PLATE_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_brick_plate",true);
+    public static final Block BRICK_PLATE_DESERT = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"desert_brick_plate",true);
+    public static final Block BRICK_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"gray_brick_plate",true);
+    public static final Block BRICK_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dark_yellow_brick_plate",true);
+    public static final Block BRICK_PLATE_BROWN = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brown_brick_plate",true);
 
 
     // PLANKS
@@ -339,23 +339,23 @@ public class ModBlocks {
     public static final Block DARK_BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"dark_bricks_wall",true);
 
     // FACTORY
-    public static final Block FACTORY_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "factory_plate_white",true);
-    public static final Block FACTORY_PLATE_GREY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "factory_plate_grey",true);
+    public static final Block FACTORY_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "white_factory_plate",true);
+    public static final Block FACTORY_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "gray_factory_plate",true);
     public static final Block VENTILATION = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "ventilation",true);
     public static final Block RUST_VENTILATION = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "rust_ventilation",true);
     public static final Block GARAGE_DOOR = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "garage_door",true);
-    public static final Block RUST_GARAGE_DOOR = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "rust_garage_door",true);
-    public static final Block DANGER_BLOCK = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "danger_block",true);
+    public static final Block RUST_GARAGE_DOOR = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "rusty_garage_door",true);
+    public static final Block DANGER_BLOCK = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "yellow_danger_lines_block",true);
     public static final Block ELECTRIC_PANEL = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "electric_panel",true);
     public static final Block ELECTRIC_PANEL_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "electric_panel_b",true);
     public static final Block INDUSTRIAL_LAMP = register(new Block(AbstractBlock.Settings.create().mapColor(MapColor.WHITE).instrument(Instrument.PLING).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance((state) -> 15)), "industrial_lamp",true);
     public static final Block NUCLEAR_BLOCK = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "nuclear_block",true);
-    public static final Block BOX_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_a",true);
-    public static final Block BOX_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_b",true);
-    public static final Block BOX_C = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_c",true);
-    public static final Block BOX_D = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_d",true);
-    public static final Block BOX_E = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_e",true);
-    public static final Block BOX_F = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "box_f",true);
+    public static final Block BOX_A = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_a",true);
+    public static final Block BOX_B = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_b",true);
+    public static final Block BOX_C = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_c",true);
+    public static final Block BOX_D = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_d",true);
+    public static final Block BOX_E = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_e",true);
+    public static final Block BOX_F = register(new BoxBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "box_f",true);
     public static final Block CELL_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "cell_plate",true);
     public static final Block SOLAR_PANEL_A = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "solar_panel_a",true);
     public static final Block SOLAR_PANEL_B = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "solar_panel_b",true);

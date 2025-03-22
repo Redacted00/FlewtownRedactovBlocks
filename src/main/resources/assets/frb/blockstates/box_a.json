@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "frb:block/box_a",
+      "y": 90
+    },
+    "facing=north": {
       "model": "frb:block/box_a"
+    },
+    "facing=south": {
+      "model": "frb:block/box_a",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "frb:block/box_a",
+      "y": 270
     }
   }
 }

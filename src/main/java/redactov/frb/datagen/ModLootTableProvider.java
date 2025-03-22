@@ -45,8 +45,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BROWN_BRICKS);
         addDrop(ModBlocks.DARK_BRICKS);
         addDrop(ModBlocks.STONE_PLATE);
-        addDrop(ModBlocks.STONE_PLATE_GREY);
-        addDrop(ModBlocks.STONE_PLATE_LIGHT_GREY);
+        addDrop(ModBlocks.STONE_PLATE_GRAY);
+        addDrop(ModBlocks.STONE_PLATE_LIGHT_GRAY);
         addDrop(ModBlocks.STONE_PLATE_WHITE);
         addDrop(ModBlocks.STONE_PLATE_WHITE_COLORB);
         addDrop(ModBlocks.STONE_PLATE_WHITE_COLORC);
@@ -61,7 +61,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BRICK_PLATE_BROWN);
         addDrop(ModBlocks.BRICK_PLATE_WHITE);
         addDrop(ModBlocks.BRICK_PLATE_YELLOW);
-        addDrop(ModBlocks.BRICK_PLATE_GREY);
+        addDrop(ModBlocks.BRICK_PLATE_GRAY);
         addDrop(ModBlocks.BRICK_PLATE_DARK_YELLOW);
 
         addDrop(ModBlocks.OAK_PLANKS_A);
@@ -173,7 +173,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GRAVEL);
         
         addDrop(ModBlocks.FACTORY_PLATE_WHITE);
-        addDrop(ModBlocks.FACTORY_PLATE_GREY);
+        addDrop(ModBlocks.FACTORY_PLATE_GRAY);
         addDrop(ModBlocks.VENTILATION);
         addDrop(ModBlocks.RUST_VENTILATION);
         addDrop(ModBlocks.GARAGE_DOOR);

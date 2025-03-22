@@ -1,5 +1,5 @@
-// 1.20.1	2025-01-18T20:48:58.8758712	Flewtown Redactov Blocks/Tags for minecraft:block
-94e79d6d1b1ea384652a61b534ad7025db778f58 data\minecraft\tags\blocks\mineable\pickaxe.json
-b97ef119b65a3edb5c887378e503c2297faa4c4d data\minecraft\tags\blocks\needs_iron_tool.json
+// 1.20.1	2025-03-22T22:45:08.3093221	Flewtown Redactov Blocks/Tags for minecraft:block
+1f47dea4455efc33a52df21c44d9c5c086361bfb data\minecraft\tags\blocks\mineable\pickaxe.json
+2283abc3ffb26e540e33b1ff72416187b1dfb023 data\minecraft\tags\blocks\needs_iron_tool.json
 ed0ec921a957da97a93ef2fe80344499606f8801 data\minecraft\tags\blocks\mineable\shovel.json
 b19300115ae19e90e807ffa48c8a2d7d4b5699aa data\minecraft\tags\blocks\mineable\axe.json

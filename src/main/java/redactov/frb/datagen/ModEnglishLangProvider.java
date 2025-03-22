@@ -23,8 +23,8 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DIRTY_BRICKS_STAIRS,"Old Brick Stairs");
         translationBuilder.add(ModBlocks.DIRTY_BRICKS_SLAB,"Old Brick Slab");
         translationBuilder.add(ModBlocks.STONE_PLATE,"Stone Plate");
-        translationBuilder.add(ModBlocks.STONE_PLATE_GREY,"Grey Stone Plate");
-        translationBuilder.add(ModBlocks.STONE_PLATE_LIGHT_GREY,"Light Grey Stone Plate");
+        translationBuilder.add(ModBlocks.STONE_PLATE_GRAY,"Gray Stone Plate");
+        translationBuilder.add(ModBlocks.STONE_PLATE_LIGHT_GRAY,"Light Gray Stone Plate");
         translationBuilder.add(ModBlocks.STONE_PLATE_WHITE,"White Stone Plate");
         translationBuilder.add(ModBlocks.STONE_PLATE_WHITE_COLORB,"White Stone Plate (B)");
         translationBuilder.add(ModBlocks.STONE_PLATE_WHITE_COLORC,"White Stone Plate (C)");
@@ -39,7 +39,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BRICK_PLATE_BROWN,"Brown Brick Plate");
         translationBuilder.add(ModBlocks.BRICK_PLATE_WHITE,"White Brick Plate");
         translationBuilder.add(ModBlocks.BRICK_PLATE_YELLOW,"Yellow Brick Plate");
-        translationBuilder.add(ModBlocks.BRICK_PLATE_GREY,"Grey Brick Plate");
+        translationBuilder.add(ModBlocks.BRICK_PLATE_GRAY,"Gray Brick Plate");
         translationBuilder.add(ModBlocks.BRICK_PLATE_DARK_YELLOW,"Dark Yellow Brick Plate");
 
         translationBuilder.add(ModBlocks.OAK_PLANKS_A, "Oak Planks (A)");
@@ -151,7 +151,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.GRAVEL,"Gravel");
         
         translationBuilder.add(ModBlocks.FACTORY_PLATE_WHITE,"White Factory Plate");
-        translationBuilder.add(ModBlocks.FACTORY_PLATE_GREY,"Grey Factory Plate");
+        translationBuilder.add(ModBlocks.FACTORY_PLATE_GRAY,"Gray Factory Plate");
         translationBuilder.add(ModBlocks.VENTILATION, "Ventilation");
         translationBuilder.add(ModBlocks.RUST_VENTILATION, "Rust Ventilation");
         translationBuilder.add(ModBlocks.GARAGE_DOOR, "Garage Door Block");

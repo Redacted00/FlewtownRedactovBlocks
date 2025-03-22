@@ -1,10 +1,11 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
-    "top": "frb:block/box_a_top",
-    "bottom": "frb:block/box_a_bottom",
+    "up": "frb:block/box_a_top",
+    "down": "frb:block/box_a_bottom",
     "south": "frb:block/box_a_front",
     "west": "frb:block/box_a_side",
+    "particle": "frb:block/box_a_side",
     "north": "frb:block/box_a_front",
     "east": "frb:block/box_a_side"
   }

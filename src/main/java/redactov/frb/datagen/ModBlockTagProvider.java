@@ -61,8 +61,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BROWN_BRICKS)
                 .add(ModBlocks.DARK_BRICKS)
                 .add(ModBlocks.STONE_PLATE)
-                .add(ModBlocks.STONE_PLATE_GREY)
-                .add(ModBlocks.STONE_PLATE_LIGHT_GREY)
+                .add(ModBlocks.STONE_PLATE_GRAY)
+                .add(ModBlocks.STONE_PLATE_LIGHT_GRAY)
                 .add(ModBlocks.STONE_PLATE_WHITE)
                 .add(ModBlocks.STONE_PLATE_WHITE_COLORB)
                 .add(ModBlocks.STONE_PLATE_WHITE_COLORC)
@@ -77,7 +77,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BRICK_PLATE_BROWN)
                 .add(ModBlocks.BRICK_PLATE_WHITE)
                 .add(ModBlocks.BRICK_PLATE_YELLOW)
-                .add(ModBlocks.BRICK_PLATE_GREY)
+                .add(ModBlocks.BRICK_PLATE_GRAY)
                 .add(ModBlocks.BRICK_PLATE_DARK_YELLOW)
 
                 .add(ModBlocks.OAK_PLANKS_A)
@@ -154,7 +154,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
                 .add(ModBlocks.FACTORY_PLATE_WHITE)
-                .add(ModBlocks.FACTORY_PLATE_GREY)
+                .add(ModBlocks.FACTORY_PLATE_GRAY)
                 .add(ModBlocks.VENTILATION)
                 .add(ModBlocks.RUST_VENTILATION)
                 .add(ModBlocks.GARAGE_DOOR)
@@ -210,8 +210,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BROWN_BRICKS)
                 .add(ModBlocks.DARK_BRICKS)
                 .add(ModBlocks.STONE_PLATE)
-                .add(ModBlocks.STONE_PLATE_GREY)
-                .add(ModBlocks.STONE_PLATE_LIGHT_GREY)
+                .add(ModBlocks.STONE_PLATE_GRAY)
+                .add(ModBlocks.STONE_PLATE_LIGHT_GRAY)
                 .add(ModBlocks.STONE_PLATE_WHITE)
                 .add(ModBlocks.STONE_PLATE_WHITE_COLORB)
                 .add(ModBlocks.STONE_PLATE_WHITE_COLORC)
@@ -226,7 +226,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BRICK_PLATE_BROWN)
                 .add(ModBlocks.BRICK_PLATE_WHITE)
                 .add(ModBlocks.BRICK_PLATE_YELLOW)
-                .add(ModBlocks.BRICK_PLATE_GREY)
+                .add(ModBlocks.BRICK_PLATE_GRAY)
                 .add(ModBlocks.BRICK_PLATE_DARK_YELLOW)
 
                 .add(ModBlocks.OAK_PLANKS_A)
@@ -335,7 +335,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLACK_WALL_PLANKS)
 
                 .add(ModBlocks.FACTORY_PLATE_WHITE)
-                .add(ModBlocks.FACTORY_PLATE_GREY)
+                .add(ModBlocks.FACTORY_PLATE_GRAY)
                 .add(ModBlocks.VENTILATION)
                 .add(ModBlocks.RUST_VENTILATION)
                 .add(ModBlocks.GARAGE_DOOR)
