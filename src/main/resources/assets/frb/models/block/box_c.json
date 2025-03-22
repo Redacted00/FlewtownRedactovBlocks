@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
     "top": "frb:block/box_c_top",
     "bottom": "frb:block/box_c_top",
