@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "frb:block/acacia_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "frb:block/acacia_log"
+    },
+    "axis=z": {
+      "model": "frb:block/acacia_log_horizontal",
+      "x": 90
+    }
+  }
+}

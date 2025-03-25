@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "":
+      {
+        "model": "frb:block/road_barrel"
+      }
+  }
+}

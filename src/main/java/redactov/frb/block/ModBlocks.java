@@ -19,6 +19,7 @@ import redactov.frb.GreenfieldItemGroup;
 import redactov.frb.block.props.DumpsterABlock;
 import redactov.frb.block.props.DumpsterBBlock;
 
+import static net.minecraft.block.Blocks.IRON_BARS;
 import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class ModBlocks {
@@ -90,19 +91,24 @@ public class ModBlocks {
     public static final Block SOIL_H = register(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),"soil_h",true);
     public static final Block SOIL_I = register(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),"soil_i",true);
     public static final Block SOIL_J = register(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),"soil_j",true);
+    public static final Block ACACIA_LOG = register(new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)),"acacia_log",true);
     public static final Block COBBLE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"cobble",true);
     public static final Block COBBLE_LIGHT = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"cobble_light",true);
     public static final Block COBBLE_DARK = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"cobble_dark",true);
     public static final Block MOSSY_COBBLE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"mossy_cobble",true);
     public static final Block DECO_COBBLE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"deco_cobble",true);
 
+    public static final Block STONE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone",true);
     public static final Block STONE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_a",true);
     public static final Block DIRTY_STONE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dirty_stone",true);
     public static final Block STONE_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_b",true);
     public static final Block STONE_C = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_c",true);
+    public static final Block SMOOTH_STONE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"smooth_stone",true);
     public static final Block SMOOTH_STONE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"smooth_stone_a",true);
     public static final Block SMOOTH_STONE_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"smooth_stone_b",true);
     public static final Block SMOOTH_STONE_C = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"smooth_stone_c",true);
+    public static final Block SMOOTH_STONE_D = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"smooth_stone_d",true);
+
 
 
     // BRICKS
@@ -110,15 +116,21 @@ public class ModBlocks {
     public static final Block BRICKS_OLD_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"bricks_old_a",true);
     public static final Block BRICKS_OLD_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"bricks_old_b",true);
     public static final Block WHITE_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_bricks",true);
+    public static final Block YELLOW_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_bricks",true);
     public static final Block ORANGE_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"orange_bricks",true);
     public static final Block BROWN_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brown_bricks",true);
     public static final Block DARK_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dark_bricks",true);
     public static final Block DIRTY_BRICKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dirty_bricks",true);
-
+    public static final Block SANDSTONE_BRICKS_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sandstone_bricks_a",true);
+    public static final Block SANDSTONE_BRICKS_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sandstone_bricks_b",true);
+    public static final Block SANDSTONE_BRICKS_C = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sandstone_bricks_c",true);
+    public static final Block SANDSTONE_BRICKS_CRACKED = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sandstone_bricks_cracked",true);
+    public static final Block SANDSTONE_BRICKS_CHAOTIC = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sandstone_bricks_chaotic",true);
 
 
     // STONE PLATE's
     public static final Block STONE_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate",true);
+    public static final Block STONE_PLATE_CRACKED = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"stone_plate_cracked",true);
     public static final Block STONE_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"gray_stone_plate",true);
     public static final Block STONE_PLATE_LIGHT_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"light_gray_stone_plate",true);
     public static final Block STONE_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_stone_plate",true);
@@ -128,7 +140,7 @@ public class ModBlocks {
     public static final Block STONE_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dark_yellow_stone_plate",true);
 
     //BRICK PLATE's
-
+    public static final Block PRISMARINE_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"prismarine_plate",true);
     public static final Block BRICK_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate",true);
     public static final Block BRICK_PLATE_OLD = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_old",true);
     public static final Block BRICK_PLATE_MOSSY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brick_plate_mossy",true);
@@ -139,6 +151,7 @@ public class ModBlocks {
     public static final Block BRICK_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"gray_brick_plate",true);
     public static final Block BRICK_PLATE_DARK_YELLOW = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"dark_yellow_brick_plate",true);
     public static final Block BRICK_PLATE_BROWN = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"brown_brick_plate",true);
+    public static final Block BRICK_PLATE_GREEN = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"green_brick_plate",true);
 
 
     // PLANKS
@@ -149,11 +162,20 @@ public class ModBlocks {
     public static final Block OAK_PLANKS_C = register(new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), "oak_planks_c",true);
     public static final Block SPRUCE_PLANKS = register(new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), "spruce_planks",true);
     public static final Block ACACIA_PLANKS = register(new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), "acacia_planks",true);
+    public static final Block SANDSTONE_PLANKS = register(new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), "sandstone_planks",true);
+    public static final Block GREEN_PLANKS = register(new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), "green_planks",true);
 
     // CONCRETE
-    //
+
+    public static final Block SAND_CONCRETE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sand_concrete_a",true);
+    public static final Block SAND_CONCRETE_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"sand_concrete_b",true);
+    public static final Block PRISMARINE_CONCRETE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"prismarine_concrete",true);
+
     //
     // TYPE A
+
+
+
     public static final Block WHITE_CONCRETE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"white_concrete_a",true);
     public static final Block ORANGE_CONCRETE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"orange_concrete_a",true);
     public static final Block MAGENTA_CONCRETE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"magenta_concrete_a",true);
@@ -222,6 +244,10 @@ public class ModBlocks {
     public static final Block RED_CONCRETE_D = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"red_concrete_d",true);
     public static final Block BLACK_CONCRETE_D = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"black_concrete_d",true);
 
+    public static final Block YELLOW_CONCRETE_E = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_e",true);
+    public static final Block YELLOW_CONCRETE_F = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_f",true);
+    public static final Block YELLOW_CONCRETE_G = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_g",true);
+
     // WALL PLANKS
 
     public static final Block WALL_PLANKS = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"wall_planks",true);
@@ -259,6 +285,8 @@ public class ModBlocks {
     public static final Block GREEN_WALL_PLANKS_VERTICAL = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"green_wall_planks_vertical",true);
     public static final Block RED_WALL_PLANKS_VERTICAL = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"red_wall_planks_vertical",true);
     public static final Block BLACK_WALL_PLANKS_VERTICAL = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)),"black_wall_planks_vertical",true);
+
+
 
     public static final Block GLASS_A = register(new GlassBlock(GlassBlockSettings),"glass_a",true);
     public static final Block GLASS_B = register(new GlassBlock(GlassBlockSettings),"glass_b",true);
@@ -299,6 +327,10 @@ public class ModBlocks {
     public static final Block BLACK_GLASS_PANE = register(new GlassPane(GlassBlockSettings),"black_glass_pane",true);
     public static final Block BARCODED_GLASS_PANE_A = register(new GlassPane(GlassBlockSettings.strength(2f)),"barcoded_glass_pane_a",true);
     public static final Block BARCODED_GLASS_PANE_B = register(new GlassPane(GlassBlockSettings.strength(2f)),"barcoded_glass_pane_b",true);
+
+    public static final Block IRON_BARS = register(new PaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)),"iron_bars",true);
+
+
     public static final Block GRAVEL = register(new GravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)),"gravel",true);
     public static final Block GRAVEL_B = register(new GravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)),"gravel_b",true);
 
@@ -310,6 +342,14 @@ public class ModBlocks {
     public static final Block ORANGE_BRICKS_STAIRS = register(new StairsBlock(ModBlocks.DIRTY_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"orange_bricks_stairs",true);
     public static final Block BROWN_BRICKS_STAIRS = register(new StairsBlock(ModBlocks.DIRTY_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"brown_bricks_stairs",true);
     public static final Block DARK_BRICKS_STAIRS = register(new StairsBlock(ModBlocks.DIRTY_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"dark_bricks_stairs",true);
+    public static final Block BRICKS_PLATE_OLD_STAIRS = register(new StairsBlock(ModBlocks.BRICK_PLATE_OLD.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"bricks_plate_old_stairs",true);
+    public static final Block YELLOW_BRICKS_PLATE_STAIRS = register(new StairsBlock(ModBlocks.BRICK_PLATE_YELLOW.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"yellow_bricks_plate_stairs",true);
+    public static final Block SAND_CONCRETE_A_STAIRS = register(new StairsBlock(ModBlocks.SAND_CONCRETE_A.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"sand_concrete_a_stairs",true);
+    public static final Block SAND_CONCRETE_B_STAIRS = register(new StairsBlock(ModBlocks.SAND_CONCRETE_B.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)),"sand_concrete_b_stairs",true);
+    public static final Block YELLOW_CONCRETE_E_STAIRS = register(new StairsBlock(ModBlocks.YELLOW_CONCRETE_E.getDefaultState(),FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_e_stairs",true);
+
+
+
     public static final Block DIRTY_BRICKS_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)),"dirty_bricks_slab",true);
     public static final Block BRICKS_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.DIRTY_BRICKS)),"bricks_slab",true);
     public static final Block BRICKS_OLD_A_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.DIRTY_BRICKS)),"bricks_old_a_slab",true);
@@ -318,14 +358,23 @@ public class ModBlocks {
     public static final Block ORANGE_BRICKS_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.DIRTY_BRICKS)),"orange_bricks_slab",true);
     public static final Block BROWN_BRICKS_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.DIRTY_BRICKS)),"brown_bricks_slab",true);
     public static final Block DARK_BRICKS_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.DIRTY_BRICKS)),"dark_bricks_slab",true);
+    public static final Block YELLOW_STONE_PLATE_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"yellow_stone_plate_slab",true);
     public static final Block SMOOTH_STONE_A_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_a_slab",true);
     public static final Block SMOOTH_STONE_B_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_b_slab",true);
     public static final Block SMOOTH_STONE_C_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_c_slab",true);
+    public static final Block BRICKS_PLATE_OLD_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"bricks_plate_old_slab",true);
+    public static final Block YELLOW_BRICKS_PLATE_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"yellow_bricks_plate_slab",true);
+    public static final Block YELLOW_CONCRETE_E_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_e_slab",true);
 
 
     public static final Block WHITE_FACTORY_PLATE_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"white_factory_plate_slab",true);
     public static final Block GRAY_FACTORY_PLATE_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"gray_factory_plate_slab",true);
     public static final Block GRAVEL_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)),"gravel_slab",true);
+    public static final Block GRAY_CONCRETE_A_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"gray_concrete_a_slab",true);
+    public static final Block GRAY_CONCRETE_D_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"gray_concrete_d_slab",true);
+    public static final Block GRAY_CONCRETE_C_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"gray_concrete_c_slab",true);
+    public static final Block SAND_CONCRETE_A_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"sand_concrete_a_slab",true);
+    public static final Block SAND_CONCRETE_B_SLAB = register(new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"sand_concrete_b_slab",true);
 
 
 
@@ -333,14 +382,26 @@ public class ModBlocks {
     public static final Block BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"bricks_wall",true);
     public static final Block BRICKS_OLD_A_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"bricks_old_a_wall",true);
     public static final Block BRICKS_OLD_B_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"bricks_old_b_wall",true);
+    public static final Block BRICKS_PLATE_OLD_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"bricks_plate_old_wall",true);
     public static final Block WHITE_BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"white_bricks_wall",true);
     public static final Block ORANGE_BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"orange_bricks_wall",true);
     public static final Block BROWN_BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"brown_bricks_wall",true);
     public static final Block DARK_BRICKS_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).solid()),"dark_bricks_wall",true);
+    public static final Block STRIPPED_OAK_LOG_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE)),"stripped_oak_log_wall",true);
+    public static final Block YELLOW_CONCRETE_E_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE)),"yellow_concrete_e_wall",true);
+    public static final Block SMOOTH_STONE_A_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_a_wall",true);
+    public static final Block SMOOTH_STONE_B_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_b_wall",true);
+    public static final Block SMOOTH_STONE_C_WALL = register(new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)),"smooth_stone_c_wall",true);
+
+    // SANDCONCRETE
 
     // FACTORY
+    public static final Block METAL_PLATE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "metal_plate",true);
     public static final Block FACTORY_PLATE_WHITE = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "white_factory_plate",true);
     public static final Block FACTORY_PLATE_GRAY = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "gray_factory_plate",true);
+    public static final Block FACTORY_PLATE_A = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "factory_plate_a",true);
+    public static final Block FACTORY_PLATE_B = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "factory_plate_b",true);
+
     public static final Block VENTILATION = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "ventilation",true);
     public static final Block RUST_VENTILATION = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "rust_ventilation",true);
     public static final Block GARAGE_DOOR = register(new Block(FabricBlockSettings.copyOf(Blocks.STONE)), "garage_door",true);
@@ -380,10 +441,13 @@ public class ModBlocks {
     public static final Block WHITE_OAK_DOOR = register(new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS),BlockSetType.OAK),"white_oak_door",true);
     public static final Block GLASS_DOOR = register(new DoorBlock(FabricBlockSettings.copyOf(Blocks.GLASS),BlockSetType.STONE),"glass_door",true);
 
-    // Bloha Models
-    public static final Block DUMPSTER = register(new DumpsterABlock(AbstractBlock.Settings.copy(Blocks.CHEST)), "dumpster",true);
-    public static final Block DUMPSTER_B = register(new DumpsterBBlock(AbstractBlock.Settings.copy(Blocks.CHEST)), "dumpster_b",true);
+    public static final Block BRICKS_PLATE_OLD_FENCE = register(new FenceBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "bricks_plate_old_fence", true);
+    public static final Block STRIPPED_OAK_LOG_FENCE = register(new FenceBlock(FabricBlockSettings.copyOf(Blocks.STONE)), "stripped_oak_log_fence", true);
 
+    public static final Block BRICKS_PLATE_OLD_FENCE_GATE = register(new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.STONE), WoodType.OAK), "bricks_plate_old_fence_gate", true);
+    public static final Block STRIPPED_OAK_LOG_FENCE_GATE = register(new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.STONE), WoodType.OAK), "stripped_oak_log_fence_gate", true);
+
+    public static final Block WHITE_CONCRETE_BUTTON = register(new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 5, false), "white_concrete_button", true);
 
 }
 

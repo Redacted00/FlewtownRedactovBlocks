@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "frb:block/modern_light_old" },
+    "facing=east": { "model": "frb:block/modern_light_old", "y": 90},
+    "facing=south": { "model": "frb:block/modern_light_old", "y": 180},
+    "facing=west": { "model": "frb:block/modern_light_old", "y": 270}
+  }
+}

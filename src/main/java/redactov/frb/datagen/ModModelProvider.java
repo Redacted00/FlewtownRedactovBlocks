@@ -3,20 +3,9 @@ package redactov.frb.datagen;
 import com.terraformersmc.modmenu.util.mod.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GrassBlock;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import redactov.frb.FlewtownRedactovBlocks;
 import redactov.frb.block.ModBlocks;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -28,7 +17,19 @@ public class ModModelProvider extends FabricModelProvider {
 
     //public static Block ORANGE_BRICKS = Registry.register(Registries.BLOCK, new Identifier(FlewtownRedactovBlocks.MOD_ID, "orange_bricks"), new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
 
+    private void registerPaneBlock(BlockStateModelGenerator blockStateModelGenerator) {
+        Identifier identifier = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_post_ends");
+        Identifier identifier2 = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_post");
+        Identifier identifier3 = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_cap");
+        Identifier identifier4 = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_cap_alt");
+        Identifier identifier5 = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_side");
+        Identifier identifier6 = ModelIds.getBlockSubModelId(ModBlocks.IRON_BARS, "_side_alt");
 
+        blockStateModelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(ModBlocks.IRON_BARS).with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2)).with(When.create().set(Properties.NORTH, true).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, true).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, true).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5)).with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier6)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier6).put(VariantSettings.Y, VariantSettings.Rotation.R90)));
+        blockStateModelGenerator.registerItemModel(ModBlocks.IRON_BARS);
+        System.out.println("bara");
+    }
+    
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
@@ -37,10 +38,17 @@ public class ModModelProvider extends FabricModelProvider {
         //blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.WHITE_WALL_PLANKS,);
         //blockStateModelGenerator.registerDispenserLikeOrientable(ModBlocks.GRASS);
 
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLASS_A);
-
-
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_BRICKS_A);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_BRICKS_B);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_BRICKS_C);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_BRICKS_CRACKED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_BRICKS_CHAOTIC);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_CRACKED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SANDSTONE_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GREEN_PLANKS);
+        blockStateModelGenerator.registerItemModel(ModBlocks.IRON_BARS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_GREEN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_BRICKS);
         blockStateModelGenerator.registerGlassPane(ModBlocks.GLASS_A,ModBlocks.GLASS_PANE_A);
         blockStateModelGenerator.registerGlassPane(ModBlocks.GLASS_B,ModBlocks.GLASS_PANE_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SOIL_B); //
@@ -67,24 +75,48 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerGlassPane(ModBlocks.BARCODED_GLASS_A,ModBlocks.BARCODED_GLASS_PANE_A);
         blockStateModelGenerator.registerGlassPane(ModBlocks.BARCODED_GLASS_B,ModBlocks.BARCODED_GLASS_PANE_B);
 
-
-
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DIRT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLE_LIGHT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLE_DARK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DECO_COBBLE);
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOOTH_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_A);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_C);
         BlockStateModelGenerator.BlockTexturePool SmoothStoneA = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_STONE_A);
         BlockStateModelGenerator.BlockTexturePool SmoothStoneB = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_STONE_B);
         BlockStateModelGenerator.BlockTexturePool SmoothStoneC = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_STONE_C);
+
+        SmoothStoneA.wall(ModBlocks.SMOOTH_STONE_A_WALL);
+        SmoothStoneA.wall(ModBlocks.SMOOTH_STONE_B_WALL);
+        SmoothStoneA.wall(ModBlocks.SMOOTH_STONE_C_WALL);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DIRTY_STONE);
 
+        BlockStateModelGenerator.BlockTexturePool BricksPlateOldPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BRICK_PLATE_OLD);
+        BlockStateModelGenerator.BlockTexturePool YellowBricksPlatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BRICK_PLATE_YELLOW);
+        BlockStateModelGenerator.BlockTexturePool SandConcreteAPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SAND_CONCRETE_A);
+        BlockStateModelGenerator.BlockTexturePool SandConcreteBPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SAND_CONCRETE_B);
 
+        SandConcreteAPool.stairs(ModBlocks.SAND_CONCRETE_A_STAIRS);
+        SandConcreteBPool.stairs(ModBlocks.SAND_CONCRETE_B_STAIRS);
+        SandConcreteAPool.slab(ModBlocks.SAND_CONCRETE_A_SLAB);
+        SandConcreteBPool.slab(ModBlocks.SAND_CONCRETE_B_SLAB);
+
+        BricksPlateOldPool.slab(ModBlocks.BRICKS_PLATE_OLD_SLAB);
+        BricksPlateOldPool.stairs(ModBlocks.BRICKS_PLATE_OLD_STAIRS);
+        BricksPlateOldPool.wall(ModBlocks.BRICKS_PLATE_OLD_WALL);
+        YellowBricksPlatePool.slab(ModBlocks.YELLOW_BRICKS_PLATE_SLAB);
+        YellowBricksPlatePool.stairs(ModBlocks.YELLOW_BRICKS_PLATE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool YellowConcreteEPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.YELLOW_CONCRETE_E);
+
+        YellowConcreteEPool.stairs(ModBlocks.YELLOW_CONCRETE_E_STAIRS);
+        YellowConcreteEPool.slab(ModBlocks.YELLOW_CONCRETE_E_SLAB);
+        YellowConcreteEPool.wall(ModBlocks.YELLOW_CONCRETE_E_WALL);
 
         BlockStateModelGenerator.BlockTexturePool BricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BRICKS);
         BlockStateModelGenerator.BlockTexturePool BricksOldAPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BRICKS_OLD_A);
@@ -94,13 +126,43 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool BrownBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_BRICKS);
         BlockStateModelGenerator.BlockTexturePool DarkBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DARK_BRICKS);
 
+        BlockStateModelGenerator.BlockTexturePool StrippedOakLogPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STRIPPED_OAK_PLANKS);
+
+        StrippedOakLogPool.fence(ModBlocks.STRIPPED_OAK_LOG_FENCE);
+        StrippedOakLogPool.fenceGate(ModBlocks.STRIPPED_OAK_LOG_FENCE_GATE);
+        StrippedOakLogPool.wall(ModBlocks.STRIPPED_OAK_LOG_WALL);
+
         BlockStateModelGenerator.BlockTexturePool WhiteFactoryPlatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FACTORY_PLATE_WHITE);
         BlockStateModelGenerator.BlockTexturePool GrayFactoryPlatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FACTORY_PLATE_GRAY);
+        BlockStateModelGenerator.BlockTexturePool FactoryPlateAPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FACTORY_PLATE_A);
+        BlockStateModelGenerator.BlockTexturePool FactoryPlateBPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FACTORY_PLATE_B);
+
+        BlockStateModelGenerator.BlockTexturePool WhiteConcreteAPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_CONCRETE_A);
+
+        WhiteConcreteAPool.button(ModBlocks.WHITE_CONCRETE_BUTTON);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOOTH_STONE_D);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PRISMARINE_CONCRETE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PRISMARINE_PLATE);
+        //blockStateModelGenerator.registerLog(ModBlocks.ACACIA_LOG);
+        blockStateModelGenerator.registerItemModel(ModBlocks.ACACIA_LOG);
         BlockStateModelGenerator.BlockTexturePool GravelFactoryPlatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAVEL);
+        BlockStateModelGenerator.BlockTexturePool YellowStonePlatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STONE_PLATE_YELLOW);
+        YellowStonePlatePool.slab(ModBlocks.YELLOW_STONE_PLATE_SLAB);
+        BlockStateModelGenerator.BlockTexturePool GrayConcreteAPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAY_CONCRETE_A);
+        BlockStateModelGenerator.BlockTexturePool GrayConcreteDPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAY_CONCRETE_D);
+        BlockStateModelGenerator.BlockTexturePool GrayConcreteCPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAY_CONCRETE_C);
+
+        GrayConcreteAPool.slab(ModBlocks.GRAY_CONCRETE_A_SLAB);
+        GrayConcreteDPool.slab(ModBlocks.GRAY_CONCRETE_D_SLAB);
+        GrayConcreteCPool.slab(ModBlocks.GRAY_CONCRETE_C_SLAB);
+
+        BricksPlateOldPool.fence(ModBlocks.BRICKS_PLATE_OLD_FENCE);
+        BricksPlateOldPool.fenceGate(ModBlocks.BRICKS_PLATE_OLD_FENCE_GATE);
 
         WhiteFactoryPlatePool.slab(ModBlocks.WHITE_FACTORY_PLATE_SLAB);
         GrayFactoryPlatePool.slab(ModBlocks.GRAY_FACTORY_PLATE_SLAB);
         GravelFactoryPlatePool.slab(ModBlocks.GRAVEL_SLAB);
+
 
 
         DirtyBricksPool.stairs(ModBlocks.DIRTY_BRICKS_STAIRS);
@@ -138,28 +200,26 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_WHITE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_WHITE_COLORB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_WHITE_COLORC);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_YELLOW);
+        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_YELLOW);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_PLATE_DARK_YELLOW);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_DESERT);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_OLD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_OLD_MOSSY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_MOSSY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_BROWN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_WHITE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_YELLOW);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_GRAY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRICK_PLATE_DARK_YELLOW);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OAK_PLANKS_A);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OAK_PLANKS_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OAK_PLANKS_C);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STRIPPED_OAK_PLANKS);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPRUCE_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ACACIA_PLANKS);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WHITE_CONCRETE_A);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_CONCRETE_F);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_CONCRETE_G);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WHITE_CONCRETE_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WHITE_CONCRETE_C);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WHITE_CONCRETE_D);
@@ -187,10 +247,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_CONCRETE_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_CONCRETE_C);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_CONCRETE_D);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAY_CONCRETE_A);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAY_CONCRETE_B);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAY_CONCRETE_C);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAY_CONCRETE_D);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_GRAY_CONCRETE_A);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_GRAY_CONCRETE_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_GRAY_CONCRETE_C);
@@ -275,6 +333,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDUSTRIAL_LAMP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CELL_PLATE);
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NUCLEAR_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.METAL_PLATE);
 
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GLASS_TRAPDOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GRID_TRAPDOOR);

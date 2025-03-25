@@ -1,8 +1,12 @@
 {
   "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
-    "top": "frb:block/box_b_top",
-    "bottom": "frb:block/box_a_top",
-    "side": "frb:block/box_b_side"
+    "up": "frb:block/box_b_top",
+    "down": "frb:block/box_b_bottom",
+    "south": "frb:block/box_b_front",
+    "west": "frb:block/box_b_side",
+    "particle": "frb:block/box_b_side",
+    "north": "frb:block/box_b_front",
+    "east": "frb:block/box_b_side"
   }
 }

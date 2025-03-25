@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redactov.frb.block.ModBlocks;
+import redactov.frb.block.RedactovBlocks;
 import redactov.frb.item.ModItems;
 import redactov.frb.screenhandler.DumpsterScreenHandler;
 import redactov.frb.screenhandler.DumpsterBScreenHandler;
@@ -42,8 +43,10 @@ public class FlewtownRedactovBlocks implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		//LOGGER.info("Hello Fabric world!");
+		FlewtownRedactovBlocksItemGroup.initialize();
 		GreenfieldItemGroup.initialize();
+		RedactovBlocks.initialize();
 		ModBlocks.initialize();
 		BlocksEntityTypes.initialize();
 		ModItems.initialize();

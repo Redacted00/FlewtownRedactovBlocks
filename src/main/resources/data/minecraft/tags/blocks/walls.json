@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "frb:dirty_bricks_wall",
+    "frb:bricks_wall",
+    "frb:bricks_old_a_wall",
+    "frb:bricks_old_b_wall",
+    "frb:bricks_plate_old_wall",
+    "frb:white_bricks_wall",
+    "frb:orange_bricks_wall",
+    "frb:brown_bricks_wall",
+    "frb:dark_bricks_wall"
+  ]
+}

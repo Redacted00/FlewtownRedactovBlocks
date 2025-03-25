@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "frb:block/concrete_wall_b" },
+    "facing=east": { "model": "frb:block/concrete_wall_b", "y": 90},
+    "facing=south": { "model": "frb:block/concrete_wall_b", "y": 180},
+    "facing=west": { "model": "frb:block/concrete_wall_b", "y": 270}
+  }
+}

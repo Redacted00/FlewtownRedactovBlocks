@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "frb:block/modern_handrails_corner" },
+    "facing=east": { "model": "frb:block/modern_handrails_corner", "y": 90},
+    "facing=south": { "model": "frb:block/modern_handrails_corner", "y": 180},
+    "facing=west": { "model": "frb:block/modern_handrails_corner", "y": 270}
+  }
+}
